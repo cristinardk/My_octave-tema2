@@ -1,0 +1,86 @@
+# Copyright Cristina Iordache 314CAa 2023-2024
+La baza codului furnizat sta ideea unui simulator Octave,
+astfel programul este adaptat pe lucrul cu matrici.
+Pentru a indeplini cerintele, toate matricile citite
+au fost introduse intr-un array cu scopul acccesari usoare
+a elementelor. De asemenea, pentru accesarea dimensiunilor,
+acestea au fost introdu-se intr-o matrice.
+La fiecare comanda diferita am adaptat matricile,
+matricea de dimensiuni, cat si array-ul in conformitate
+cu cerintele.
+
+1. Comanda 'L': Se introduce in arrray o noua matrice.
+Se ia in considerare dimensiunea actuala a array-ului
+si capacitatea totala a acestuia. Astfel, in momentul
+in care nu mai exista capacitate suficienta pentru a
+adauga o matrice, capacitatea array -ului se dubleaza.
+Aceeasi idee de implementarea a fost folosita si pentru
+matricea de dimensiuni.
+
+2. Comanda 'D': Afiseaza pe ecran dimensiunile unei matrice
+din array de la un anumit index dat de la tastatura.
+
+3. Comanda 'P' : Afiseaza pe ecran matricea corespunzatoare
+unui index dat de la tastatura din array-ul de matrici.
+
+4. Comanda 'C' : Functia corespunzatoare acestei comenzi
+are rolul de a redimensiona o matrice de la un anumit index
+din array. Dupa ce se precizeaza indexul, se vor introduce
+valorile pentru linii si coloane, construindu-se astfel o noua
+matrice cu dimensiunile specificate. Aceasta reconstruire se
+realizeaza in-place, memoria fiind realocata. Toate aceste
+modificari vor fi vizibile si in
+matricea de dimensiuni.
+
+5. Comanda 'M' : Realizeaza inmultirea a doua matrici
+corespunzatoare unor indecsi dati de la tastatura.
+Pentru efectuarea inmultiri am luat in considerare
+posibilitatea de overflow, astfel valorile din matricea
+rezultata au fost determinate prin % 10007, cat si
+gestionarea numerelor negative. Matricea
+rezultat a fost introdusa la finalul array-ului,
+verificandu-se inainte capacitatea array-ului, 
+respectiv necesitatea modificarii acesteia. Toate
+aceste modificari vor fi vizibile si in
+matricea de dimensiuni.
+
+6. Comanda 'O' : Realizeaza sortarea tuturor matricilor
+din array. Matricile au fost sortate in functie de
+suma elementelor dintr-o matrice, operatie realizata
+de functia "sum" care lua in considerare posibilitatea
+de overflow cat si gestionarea numerelor negative. Toate 
+aceste modificari vor fi vizibile si in matricea
+de dimensiuni.
+
+7. Comanda 'T' : Modifica o matrice de la un anumit
+index cu transpusa corespunzatoare. Modificarile
+se realizeaza in-place, memoria fiind realocata in
+conformitate cu dimensiunile inversate ale matricei
+initiale. Toate aceste modificari vor fi vizibile si
+in matricea de dimensiuni.
+
+8. Comanda 'R' : Realizeaza ridicare la o putere 
+a unei matrici in timp logaritmic. Am utilizat o
+operatie de verificare pe biti pentru a identifica daca
+puterea este un numar impar sau par, pentru fiecare caz
+realizandu-se calculele corespunzatoare. Si in acest caz
+au fost tratate overflow-ul cat si modificarea numerelor
+negative.
+
+9. Comanda 'S' : Realizeaza operatie de inmultire
+prin algoritmul Strassen. Acest algoritm recussiv se bazeaza
+pe impartirea fiecarei matrici in 4 blocuri de dimensiuni
+egale, realizandu-se astfel diferite operatii intre blocuri
+pentru a obtine matricea finala. Matricea rezultat va fi
+adaugata la finalul array-ului. Toate aceste modificari vor 
+fi vizibile si in matricea de dimensiuni.
+
+10. Comanda 'F' : Se efectueaza eliberarea unei matrici
+de la un anumit index din array. Prima data se 
+eliberaeza matricea ca mai apoi matricile din
+stanga indexului sa fie copiate cu o 
+pozitie in spate. Toate aceste modificari
+vor fi vizibile si in matricea de dimensiuni.
+
+11. Comanda 'Q' : Efectueaza eliberarea tuturor
+resurselor si sugereaza terminarea programului.
